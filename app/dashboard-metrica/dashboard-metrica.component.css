@@ -1,0 +1,53 @@
+.metrica
+{
+    display: block;
+    min-height: 60px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.metrica-icon
+{
+    display: block;
+    float: left;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: rgba(0,0,0,.2);
+    color: white;   
+    font-size:0rm !important;
+}
+
+.metrica-conteudo
+{
+    padding-top: 5px;
+    padding-bottom:  5px;
+    padding-left:  5px;
+    margin-left: 60px;
+    text-align: left;
+}
+
+.metrica-titulo
+{
+    display: block;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.metrica-valor
+{
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

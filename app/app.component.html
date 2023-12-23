@@ -1,0 +1,109 @@
+<div class="row">
+  <div class="col-3">
+    <dashboard-metrica
+      ValorMetrica="100"
+      NomeMetrica="Minha Métrica"
+      BackgroundColor="#0c1c4"
+    >
+      <fa-icon
+        [icon]="['fab', 'stack-overflow']"
+        style="font-size: 40px;"
+      ></fa-icon>
+    </dashboard-metrica>
+  </div>
+</div>
+
+<H6>Increment</H6>
+<increment-value
+  startValue="1"
+  endValue="100"
+  style="color:red;font-size:20pt"
+  #incr
+></increment-value>
+
+<br />
+Time (hh:mm ou h:m ou hh:m ou h:mm)<br />
+<input TimeInput />
+
+<br />
+Standard HTML (blah!)
+<input type="time" />
+
+<div class="float-label-container">
+  <input id="first" type="text" placeholder="<write first name where>" />
+  <label for="first">First Name</label>
+</div>
+
+<div class="float-label-container">
+  <select id="sec">
+    <option selected value disabled>Seelct value</option>
+    <option>a</option>
+    <option>b</option>
+    <option>c</option>
+    <option>d</option>
+  </select>
+  <label for="sec">Option</label>
+</div>
+
+<br />
+<input OnlyNumbers [OnlyInteger]="true" [OnlyPositive]="true" ReturnAsTab />
+<div class="float-label-container">
+  <input id="first" type="text" placeholder="<write first name where>" />
+  <label for="first">First Name</label>
+</div>
+<br />
+
+<div class="float-label-container">
+  <select id="sec">
+    <option selected value disabled>Seelct value</option>
+    <option>a</option>
+    <option>b</option>
+    <option>c</option>
+    <option>d</option>
+  </select>
+  <label for="sec">Option</label>
+</div>
+
+<H6>Time Change</H6>
+<div class="select">
+  <time-select #time1 (onTimeChange)="onTimeChange($event)"></time-select>
+  <br />
+
+  <H6>FillChar</H6>
+
+  {{ 'teste teste2' | fillchar: 20:' ' }} olé!<br />
+  {{ 'teste abc' | fillchar: 10:'*':false }} olé!
+
+  <select>
+    <option>{{ 'teste' | fillchar: 20:' ' }} olé!</option>
+    <option>{{ 'teste' | fillchar: 20:' ' }} olé!</option>
+  </select>
+
+  <div class="select">
+    <date-select #date1></date-select>
+  </div>
+
+  <br /><br />
+
+  <H6>Increment</H6>
+  <increment-value
+    startValue="1"
+    endValue="100"
+    style="color:red;font-size:20pt"
+    #incr
+  ></increment-value>
+  <input type="button" value="aaa" (click)="clickme()" />
+
+  <br />
+
+  <H6>Form Group Radio</H6>
+
+  <form [formGroup]="Form">
+    <input id="paysess" type="radio" formControlName="PayWhat" value="1" />
+    <label for="paysess">Pagar por Sessão</label>
+    <input id="paypax" type="radio" formControlName="PayWhat" value="2" />
+    <label for="paypax">Pago por Participante</label>
+    <input id="payhour" type="radio" formControlName="PayWhat" value="3" />
+    <label for="payhour">Pago por Hora</label>
+  </form>
+</div>

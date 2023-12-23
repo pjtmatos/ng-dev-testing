@@ -1,0 +1,132 @@
+/* Add application styles & imports to this file! */
+
+.header-app-myclock
+{
+  background-color: #314351;
+}
+
+
+
+
+/* FLOAT LABEL */
+
+/* hacks para clarity assinalados */
+
+/* float label - controlos */
+.float-label-container {
+  display: block;
+  position: relative;
+}
+
+/* tamanho e transição da label quando o campo tem focus */
+.float-label-container label,
+.float-label-container > span {
+  position: absolute;
+  left: 0;
+  top: -1.2em; /* clarity-hack: normalmente 0  */
+  cursor: text;
+  font-size: 100% !important; /* clarity-hack: normalmente 80  */
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.float-label-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* bordo sem focus */
+.float-label-container input,
+.float-label-container select {
+  font-size: inherit !important;
+  padding-top: 1em;
+  margin-bottom: 5px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 8px !important; /* clarity-hack: normalmente não tem */
+}
+
+/* animação da transição da label */
+.float-label-container input::-webkit-input-placeholder,
+.float-label-container select::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.float-label-container input::-moz-placeholder,
+.float-label-container select::-moz-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.float-label-container input:-ms-input-placeholder,
+.float-label-container select:-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.float-label-container input::placeholder,
+.float-label-container select::placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+/* controla a opacidade dos elementos para que não se sobreponham na visualização quando a label está sobre os campos */
+.float-label-container input:placeholder-shown:not(:focus)::-webkit-input-placeholder,
+.float-label-container select:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0;
+}
+.float-label-container input:placeholder-shown:not(:focus)::-moz-placeholder,
+.float-label-container select:placeholder-shown:not(:focus)::-moz-placeholder {
+  opacity: 0;
+}
+.float-label-container input:placeholder-shown:not(:focus):-ms-input-placeholder,
+.float-label-container select:placeholder-shown:not(:focus):-ms-input-placeholder {
+  opacity: 0;
+}
+.float-label-container input:placeholder-shown:not(:focus)::placeholder,
+.float-label-container select:placeholder-shown:not(:focus)::placeholder {
+  opacity: 0;
+}
+
+/* tamanho da label sem focus nem valor a ocupar os componentes */
+.float-label-container input:placeholder-shown:not(:focus) + *,
+.float-label-container select:placeholder-shown:not(:focus) + * {
+  font-size: 100% !important; /* clarity-hack: 100% - normalmente deve ser 120%*/
+  opacity: .5;
+  top: .25em;
+}
+
+/* bordo com focus */
+.float-label-container input:focus,
+.float-label-container select:focus {
+  outline: none;
+  border-color: #2ECC71;
+}
+
+/* select box icon */
+.float-label-container select {
+  padding-right: 1em;
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.5em bottom 0.25em;
+  background-size: 8px 10px;
+}
+
+
+/* cor do placeholder */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color:lightgray;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color:lightgray;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+color:lightgray;
+}
